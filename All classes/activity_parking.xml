@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="com.jk.thunder.ParkingActivity">
+
+    <EditText
+        android:id="@+id/edtCarPlate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+
+        android:hint="@string/edtCarPlate_hint"/>
+
+    <Spinner
+        android:id="@+id/spinCompany"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/edtCarPlate"
+        android:layout_alignLeft="@id/edtCarPlate"
+        android:layout_alignStart="@id/edtCarPlate"
+        />
+
+    <RadioGroup
+        android:id="@+id/rdoTime"
+        android:layout_below="@id/spinCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rdoHalfHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/rdo_half" />
+
+        <RadioButton
+            android:id="@+id/rdoOneHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rdo_one" />
+
+        <RadioButton
+            android:id="@+id/rdoTwoHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rdo_two" />
+
+        <RadioButton
+            android:id="@+id/rdoThreeHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rdo_three" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinCompany"
+        android:layout_toRightOf="@id/rdoTime"
+        android:layout_toEndOf="@id/rdoTime"
+        android:layout_alignBottom="@id/rdoTime"
+        android:layout_alignEnd="@id/spinCompany"
+        android:layout_alignRight="@id/spinCompany"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
+        android:text="TextView" />
+
+    <Spinner
+        android:id="@+id/spinLot"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rdoTime"
+        android:layout_alignLeft="@id/rdoTime"
+        android:layout_alignStart="@id/rdoTime"
+        android:layout_alignRight="@id/rdoTime"
+        android:layout_alignEnd="@id/rdoTime"
+        />
+
+    <Spinner
+        android:id="@+id/spinSpot"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtAmount"
+        android:layout_alignLeft="@id/txtAmount"
+        android:layout_alignStart="@id/txtAmount"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <Spinner
+        android:id="@+id/spinPayment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/spinSpot"
+        android:layout_alignLeft="@id/spinLot"
+        android:layout_alignStart="@id/spinLot"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/txtDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinPayment"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDateTime"
+        android:text="@string/btnSaveCaption" />
+
+
+</RelativeLayout>
